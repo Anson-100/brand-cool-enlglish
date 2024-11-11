@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.75776558.css",
+    "main.js": "/static/js/main.7b5faee9.js",
+    "static/media/teacher-china.png": "/static/media/teacher-china.3621c3ec9e93318b91bd.png",
+    "static/media/teacher-brazil.png": "/static/media/teacher-brazil.b4c4aaae31bf8e2cb5a6.png",
+    "static/media/heroImage.png": "/static/media/heroImage.3ccbaf9c58f2cac79175.png",
+    "static/media/teacher-italy.png": "/static/media/teacher-italy.7113f15d80215164689b.png",
+    "static/media/differentInteractive.PNG": "/static/media/differentInteractive.4fa029cfc8cb0803d42a.PNG",
+    "static/media/differentEngaging.PNG": "/static/media/differentEngaging.cec61768707d76124420.PNG",
+    "static/media/differentModern.PNG": "/static/media/differentModern.694ea04d225e8a4627cc.PNG",
+    "static/media/differentDynamic.PNG": "/static/media/differentDynamic.5b2fe3686ce72a9b50c6.PNG",
+    "static/media/Cool English_final version.webp": "/static/media/Cool English_final version.6964906c1eaa23dad69c.webp",
+    "static/media/apple-podcast-icon.png": "/static/media/apple-podcast-icon.276062b2c7e9352b1e4e.png",
+    "static/media/spotify-icon.png": "/static/media/spotify-icon.099d88a473c1ccabeed5.png",
+    "static/media/cool english logo.png": "/static/media/cool english logo.bba59de740d0a03db0bf.png",
+    "static/media/IconInsta.svg": "/static/media/IconInsta.9f269088b27ff186abc202f956b3bf1c.svg",
+    "static/media/IconTikTok.svg": "/static/media/IconTikTok.5f9e455273a3efd8cbf2c5b68a590140.svg",
+    "static/media/extensionIcon.svg": "/static/media/extensionIcon.efa8b1a6c1109000c3177e8536024f91.svg",
+    "index.html": "/index.html",
+    "static/media/IconYT.svg": "/static/media/IconYT.54b3760f356aa8cc45a471791f055a72.svg",
+    "static/media/IconFB.svg": "/static/media/IconFB.88202a875aab91299de919ef1f64f0e4.svg",
+    "main.75776558.css.map": "/static/css/main.75776558.css.map",
+    "main.7b5faee9.js.map": "/static/js/main.7b5faee9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75776558.css",
+    "static/js/main.7b5faee9.js"
+  ]
+}

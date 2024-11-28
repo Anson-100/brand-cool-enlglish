@@ -53,7 +53,7 @@ const Activities = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
@@ -75,7 +75,17 @@ const Activities = () => {
 
         {/* DESKTOP VIEW (TILES)================================================================================================ */}
         {isAboveMd ? (
-          <div className="font-quest flex flex-col w-5/6 h-full gap-4 z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1 },
+            }}
+            className="font-quest flex flex-col w-5/6 h-full gap-4 z-10"
+          >
             <div className="flex gap-4 w-full flex-1">
               <a
                 href="https://www.coolenglish.net/edu/categories/fun"
@@ -163,10 +173,20 @@ const Activities = () => {
                 <Bars3BottomLeftIcon className="absolute h-full w-auto left-1/2 transform -translate-x-1/2 text-bg-primary z-0" />
               </a>
             </div>
-          </div>
+          </motion.div>
         ) : (
           // MOBILE VIEW (NO TILES)========================================================================
-          <div className="font-quest flex flex-col h-full w-full gap-4 z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1 },
+            }}
+            className="font-quest flex flex-col h-full w-full gap-4 z-10"
+          >
             <div className="flex gap-4 w-full flex-1">
               <a
                 href="https://www.coolenglish.net/edu/categories/grammar"
@@ -247,7 +267,7 @@ const Activities = () => {
                 <Bars3BottomLeftIcon className="absolute h-full w-auto left-1/2 transform -translate-x-1/2 text-bg-primary z-0" />
               </a>
             </div>
-          </div>
+          </motion.div>
         )}
         <SignUpDialog isOpen={signingUp} setIsOpen={setSigningUp} />
       </section>

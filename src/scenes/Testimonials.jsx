@@ -3,6 +3,8 @@ import { motion } from "framer-motion"
 import extIcon from "../assets/extensionIcon.svg"
 import { useState } from "react"
 import SignUpDialog from "../shared/SignUpDialog"
+import JoinButton from "../buttons/JoinButton"
+
 import {
   AcademicCapIcon,
   UserGroupIcon,
@@ -66,7 +68,7 @@ const Testimonials = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
               variants={{
                 hidden: { opacity: 0, x: 50 },
                 visible: { opacity: 1, x: 0 },

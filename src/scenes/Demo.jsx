@@ -1,6 +1,7 @@
 import React from "react"
 import useMediaQuery from "../hooks/useMediaQuery"
 import { motion } from "framer-motion"
+import JoinButton from "../buttons/JoinButton"
 import {
   AcademicCapIcon,
   UserGroupIcon,
@@ -52,7 +53,7 @@ const Demo = () => {
 
         {/*CONTENT: DESKTOP VIEW================================================================ */}
         {isAboveMd ? (
-          <div className="w-5/6 flex items-center justify-center font-quest text-gray-100 text-base md:text-lg z-20">
+          <div className="w-5/6 flex items-center justify-center font-quest text-gray-100 text-base md:text-lg z-20 mb-16">
             {/* TEXT SECTION------------------- */}
 
             <div className="flex">
@@ -112,24 +113,10 @@ const Demo = () => {
                 </div>
               </motion.div>
             </div>
-
-            {/* VIDEO SECTION------------------- */}
-            <div className="">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                variants={{
-                  hidden: { opacity: 0 },
-                  visible: { opacity: 1 },
-                }}
-              ></motion.div>
-            </div>
           </div>
         ) : (
           // CONTENT: MOBILE VIEW================================================================
-          <div className="w-full h-full flex flex-col sm:gap-16 items-center gap-16 xs:gap-4 landscape-mobile:gap-4 font-quest text-gray-200 text-base md:text-lg pt-6 landscape-mobile:pt-0 se-mobile:text-sm">
+          <div className="w-full h-full flex flex-col sm:gap-16 items-center gap-16 xs:gap-4 landscape-mobile:gap-4 font-quest text-gray-200 text-base md:text-lg pt-6 landscape-mobile:pt-0 se-mobile:text-sm ">
             {" "}
             {/* VIDEO SECTION------------------- */}
             <motion.div

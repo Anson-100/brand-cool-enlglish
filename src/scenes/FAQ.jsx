@@ -103,7 +103,7 @@ const FAQ = ({ setSelectedPage }) => {
           }}
         >
           {/* HEADER================================================================================================ */}
-          <div className="mx-auto font-montserrat text-center p-4 pb-8 ss:pb-4 sm:pb-8 py-8 xs:pt-6 pt-12 md:pt-0 md:py-16 flex flex-col gap-4">
+          <div className="mx-auto font-montserrat text-center p-4 pb-8 ss:pb-4 sm:pb-8 py-8 xs:pt-6 pt-12 md:py-16 flex flex-col gap-4">
             <h1 className="text-xl md:text-3xl text-text-primary font-semibold ">
               FAQ
             </h1>

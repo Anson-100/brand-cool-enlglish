@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
+
 import { Link, useLocation } from "react-router-dom"
 import LinkDesktop from "../components/LinkDesktop"
 import LinkMobile from "../components/LinkMobile"
@@ -24,6 +25,27 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const isDesktop = useMediaQuery("(min-width: 1260px)")
   const location = useLocation()
   const navbarBackground = isTopOfPage ? "" : ""
+
+  const menuRef = useRef(null) // Add ref for the menu
+  const buttonRef = useRef(null) // Add ref for the burger button
+
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (
+        isMenuToggled &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsMenuToggled(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isMenuToggled])
 
   return (
     <nav
@@ -125,6 +147,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         ) : // BURGER MENU=============================================================
         window.location.pathname === "/" ? (
           <button
+            ref={buttonRef}
             className={`${isTopOfPage ? "" : ""} rounded-full p-4 z-50`}
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
@@ -148,7 +171,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
 
         {/* MOBILE MENU POPUP ================================================================================*/}
         {!isDesktop && isMenuToggled && (
-          <div className="fixed w-[300px] landscape-mobile:w-auto landscape-mobile:pr-6 landscape-mobile:pl-1 se-mobile:pl-3 se-mobile:pr-5 rounded-md right-4 landscape-mobile:right-4 se-mobile:right-2 top-12 z-40 bg-neutral-700">
+          <div
+            ref={menuRef}
+            className="fixed w-[300px] landscape-mobile:w-auto landscape-mobile:pr-6 landscape-mobile:pl-1 se-mobile:pl-3 se-mobile:pr-5 rounded-md right-4 landscape-mobile:right-4 se-mobile:right-2 top-12 z-40 bg-neutral-700"
+          >
             <div className="flex flex-col landscape-mobile:items-center gap-4 se-mobile:gap-2 text-lg font-quest w-full m-auto py-4 landscape-mobile:py-3 landscape-mobile:flex-row">
               <LinkMobile
                 page="Home"

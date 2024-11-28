@@ -6,6 +6,7 @@ import SignUpDialog from "../shared/SignUpDialog"
 import coolEnglishLogo from "../assets/cool english logo.png"
 import coolEnglishHero from "../assets/Cool English_final version.webp"
 import heroImage from "../assets/heroImage.png"
+import JoinButton from "../buttons/JoinButton"
 
 import { RocketLaunchIcon } from "@heroicons/react/24/outline"
 
@@ -32,15 +33,25 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <>
       {/* h-0 prevents taking up space */}
-      <div className="relative bottom-0 right-0 w-full h-0">
-        {" "}
-        <div className="absolute top-0 -right-[10%] w-[40%] aspect-square rounded-full bg-bg-dark z-0" />
-        <div className="absolute w-32 h-32 rounded-full bg-bg-dark opacity-70 top-[40rem] right-1/3" />
-        <div className="absolute w-24 h-24 rounded-full bg-bg-dark opacity-50 top-8 right-1/4" />
-        <div className="absolute w-40 h-40 rounded-full bg-bg-dark opacity-60 top-[32rem] right-1/3" />
-        <div className="absolute w-20 h-20 rounded-full bg-bg-dark opacity-80 top-16 right-40" />
-        <div className="absolute w-28 h-28 rounded-full bg-bg-dark opacity-40 top-32 right-[45%]" />
-      </div>
+      {isAboveMd ? (
+        <div className="relative bottom-0 right-0 w-full h-0">
+          {" "}
+          <div className="absolute top-0 -right-[10%] w-[40%] aspect-square rounded-full bg-bg-dark z-0" />
+          <div className="absolute w-32 h-32 rounded-full bg-bg-dark opacity-70 top-[40rem] right-1/3" />
+          <div className="absolute w-24 h-24 rounded-full bg-bg-dark opacity-50 top-8 right-1/4" />
+          <div className="absolute w-40 h-40 rounded-full bg-bg-dark opacity-60 top-[32rem] right-1/3" />
+          <div className="absolute w-20 h-20 rounded-full bg-bg-dark opacity-80 top-16 right-40" />
+          <div className="absolute w-28 h-28 rounded-full bg-bg-dark opacity-40 top-32 right-[45%]" />
+        </div>
+      ) : (
+        <div className="relative bottom-0 right-0 w-full h-0">
+          {" "}
+          <div className="absolute top-0 -right-[10%] w-[40%] aspect-square rounded-full bg-bg-dark z-0" />
+          <div className="absolute w-24 h-24 rounded-full bg-bg-dark opacity-50 top-8 right-1/4" />
+          <div className="absolute w-20 h-20 rounded-full bg-bg-dark opacity-80 top-16 right-10" />
+          <div className="absolute w-20 h-20 rounded-full bg-bg-dark opacity-40 top-52 right-[-2rem]" />
+        </div>
+      )}
       <section id="home" className="w-full h-screen relative overflow-hidden">
         <div className="flex flex-col w-5/6 mx-auto justify-center items-center h-screen py-16">
           {/* DESKTOP VIEW========================================================= */}
@@ -75,14 +86,8 @@ const Landing = ({ setSelectedPage }) => {
                 </div>
                 <div className="flex gap-4 px-6 mt-8">
                   {/* Join Now - Primary button with solid background */}
-                  <a
-                    href="https://www.coolenglish.net/auth"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-48 md: px-6 text-center py-3 rounded-lg bg-bg-supporting text-text-primary border border-border-primary hover:bg-bg-dark"
-                  >
-                    Join Now
-                  </a>
+
+                  <JoinButton />
                   {/* <button
                     onClick={() => setSigningUp(true)}
                     className="w-48 md: px-6 py-3 rounded-lg bg-bg-supporting text-text-primary border border-border-primary hover:bg-bg-dark"

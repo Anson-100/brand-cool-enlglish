@@ -30,28 +30,8 @@ const PrivacyPolicy = () => {
       question: "Data Collection",
       answer: () => (
         <span>
-          Enjoy an enhanced tennis viewing experience with our Extension! It's
-          exclusively tailored for{" "}
-          <a
-            className="hover:underline text-blue-400"
-            href="http://www.tennistv.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            www.tennistv.com
-          </a>{" "}
-          and{" "}
-          <a
-            className="hover:underline text-blue-400"
-            href="http://www.tennischannel.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            www.tennischannel.com
-          </a>
-          , activating only when you visit these sites. Rest assured, we don't
-          gather any personal info or user data through the Extension. Your
-          browsing habits, preferences, and activities outside of these sites
+          Enjoy an enhanced English teaching experience with our website! Your
+          browsing habits, preferences, and activities outside of our site
           remain completely private and untouched.
         </span>
       ),
@@ -60,35 +40,16 @@ const PrivacyPolicy = () => {
       id: "policy3",
       question: "Token Storage",
       answer:
-        "Our Extension may save a single authentication token in your browser's local storage. This token ensures smooth access to specific features or services. It's securely stored on your device and isn't shared with any external servers or third parties.",
+        "Our Site may save a single authentication token in your browser's local storage. This token ensures smooth access to specific features or services. It's securely stored on your device and isn't shared with any external servers or third parties.",
     },
     {
       id: "policy4",
       question: "Third Party Links",
       answer: () => (
         <span>
-          Our Extension doesn't link to third-party websites. This Privacy
-          Policy covers your use of the Extension on{" "}
-          <a
-            className="hover:underline text-blue-400"
-            href="http://www.tennistv.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            www.tennistv.com
-          </a>{" "}
-          or{" "}
-          <a
-            className="hover:underline text-blue-400"
-            href="http://www.tennischannel.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            www.tennischannel.com
-          </a>
-          . While using our Extension, we're not responsible for the content or
-          practices of any third-party sites you may visit through external
-          links.
+          Cool English doesn't link to third-party websites. We're not
+          responsible for the content or practices of any third-party sites you
+          may visit through external links.
         </span>
       ),
     },
